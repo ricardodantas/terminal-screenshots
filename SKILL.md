@@ -24,7 +24,15 @@ which ttyd && which ffmpeg
 
 ### Installation
 
-VHS requires `ttyd` and `ffmpeg` to be available on your PATH.
+**Recommended: Homebrew (macOS/Linux)**
+
+```bash
+brew install vhs
+```
+
+This installs VHS with all required dependencies (ttyd, ffmpeg).
+
+**Other methods:**
 
 ```bash
 # Fedora/RHEL
@@ -35,15 +43,12 @@ enabled=1
 gpgcheck=1
 gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
 sudo dnf install vhs ffmpeg
-# Install ttyd from https://github.com/tsl0922/ttyd/releases
-
-# macOS/Linux (Homebrew)
-brew install vhs
+# Also install ttyd: https://github.com/tsl0922/ttyd/releases
 
 # Arch Linux
 pacman -S vhs
 
-# Or use Docker (includes all dependencies)
+# Docker (includes all dependencies)
 docker run --rm -v $PWD:/vhs ghcr.io/charmbracelet/vhs <cassette>.tape
 ```
 
