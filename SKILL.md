@@ -90,17 +90,16 @@ You can specify multiple outputs in one tape file.
 Set Width 1200
 Set Height 600
 
-# Font settings
-Set FontSize 22
-Set FontFamily "JetBrains Mono"
+# Font settings (IMPORTANT: use "monospace" to avoid letter spacing issues)
+Set FontSize 14
+Set FontFamily "monospace"
+Set LetterSpacing 0
 
 # Appearance
-Set Theme "Catppuccin Mocha"
-Set Padding 20
-Set Margin 20
-Set MarginFill "#1e1e2e"
-Set BorderRadius 10
+Set Theme "Dracula"
+Set Padding 10
 Set WindowBar Colorful
+Set WindowBarSize 40
 
 # Behavior
 Set Shell "bash"
@@ -108,6 +107,8 @@ Set TypingSpeed 50ms
 Set Framerate 30
 Set CursorBlink false
 ```
+
+> ⚠️ **Font Warning**: Avoid custom fonts like "JetBrains Mono" or "Fira Code" — they often render with broken letter spacing in VHS. Use `"monospace"` with `Set LetterSpacing 0` for reliable results.
 
 ### Common Themes
 
@@ -156,11 +157,15 @@ Type `VAR='value'`
 ```tape
 Output screenshot.png
 
-Set Width 800
-Set Height 400
-Set FontSize 18
-Set Theme "Catppuccin Mocha"
-Set Padding 20
+Set Width 1200
+Set Height 700
+Set FontSize 14
+Set FontFamily "monospace"
+Set LetterSpacing 0
+Set Theme "Dracula"
+Set Padding 10
+Set WindowBar Colorful
+Set WindowBarSize 40
 
 # Hide setup
 Hide
@@ -181,13 +186,16 @@ Screenshot screenshot.png
 ```tape
 Output demo.gif
 
-Set Width 1000
-Set Height 500
-Set FontSize 20
+Set Width 1200
+Set Height 700
+Set FontSize 14
+Set FontFamily "monospace"
+Set LetterSpacing 0
 Set Theme "Dracula"
-Set TypingSpeed 50ms
-Set Padding 20
+Set Padding 10
 Set WindowBar Colorful
+Set WindowBarSize 40
+Set TypingSpeed 50ms
 
 # Clean start
 Hide
@@ -216,10 +224,14 @@ Sleep 2s
 Output tutorial.mp4
 
 Set Width 1200
-Set Height 600
-Set FontSize 24
-Set Theme "Tokyo Night"
-Set Shell "bash"
+Set Height 700
+Set FontSize 14
+Set FontFamily "monospace"
+Set LetterSpacing 0
+Set Theme "Dracula"
+Set Padding 10
+Set WindowBar Colorful
+Set WindowBarSize 40
 Set Framerate 30
 
 # Set a clean, minimal prompt

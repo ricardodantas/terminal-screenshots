@@ -1,38 +1,34 @@
-# Basic Terminal Screenshot
-# Generates a simple static PNG screenshot of terminal output
-#
-# Usage: vhs basic-screenshot.tape
+# Basic Screenshot Example
+# Captures a simple terminal screenshot
 
-# Output settings
 Output screenshot.png
 
-# Terminal appearance
-Set Width 900
-Set Height 500
-Set FontSize 18
+# Recommended settings for clean rendering
+Set Width 1200
+Set Height 700
+Set FontSize 14
 Set FontFamily "monospace"
-Set Theme "Catppuccin Mocha"
-Set Padding 20
-Set Margin 10
-Set MarginFill "#1e1e2e"
-Set BorderRadius 8
-Set CursorBlink false
+Set LetterSpacing 0
+Set Theme "Dracula"
+Set Padding 10
+Set WindowBar Colorful
+Set WindowBarSize 40
 
-# Use a clean, minimal prompt
+# Hide setup commands
 Hide
-Env PS1 "$ "
 Type "clear"
 Enter
+Sleep 500ms
 Show
 
-# Display some example content
-Type "echo 'Hello, World!'"
+# Your commands here
+Type "echo 'Hello from VHS!'"
 Enter
-Sleep 300ms
+Sleep 500ms
 
 Type "ls -la"
 Enter
-Sleep 500ms
+Sleep 1s
 
 # Capture the screenshot
 Screenshot screenshot.png
